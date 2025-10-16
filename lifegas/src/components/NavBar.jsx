@@ -17,7 +17,7 @@ const NavBar = () => {
 
   return (
     <>
-      <header className="flex items-center justify-between border-b bg-white px-6 py-4 shadow-sm">
+      <header className="flex items-center justify-between bg-white px-6 py-4 shadow-sm">
         {/* Left: Hamburger */}
         <HamburgerButton onClick={toggleMenu} isOpen={isMenuOpen} />
 
@@ -25,7 +25,7 @@ const NavBar = () => {
         <img src={Logo} alt="Lifegasm Logo" />
 
         {/* Right: Cart Icon */}
-        <div className="">
+        <div className="text-4xl">
           <PiShoppingBagLight />
         </div>
       </header>

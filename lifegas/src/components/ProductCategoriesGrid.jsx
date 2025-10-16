@@ -74,10 +74,13 @@ const ProductCategoriesGrid = ({
             <div className="absolute inset-0 flex items-end">
               <div className="p-6 md:p-8 w-full">
                 <button
-                  className="bg-white text-gray-900 px-6 py-3 text-sm font-semibold uppercase tracking-wider hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                  className="relative overflow-hidden bg-salmonpink-1100 font-light text-salmonpink-100 px-6 py-3 text-sm  tracking-wider shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 group/button"
                   aria-label={`Browse ${category.category} collection`}
                 >
-                  {category.title}
+                  <span className="absolute inset-0 bg-white translate-x-[-100%] group-hover/button:translate-x-0 transition-transform duration-500 ease-out"></span>
+                  <span className="relative z-10 group-hover/button:text-salmonpink-1100 transition-colors duration-500">
+                    {category.title}
+                  </span>
                 </button>
               </div>
             </div>
