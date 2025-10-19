@@ -16,12 +16,12 @@ const HeroSection = ({ backgroundImage }) => {
       {/* <div className="absolute inset-0 bg-black bg-opacity-40"></div> */}
 
       <div className="relative z-20 text-center text-white px-6 max-w-4xl mx-auto">
-        <h2 className="text-5xl text-salmonpink-100 font-medium md:text-6xl lg:text-7xl  mb-4 leading-tight">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-salmonpink-100 font-medium mb-3 sm:mb-4 leading-tight px-4 sm:px-6 md:px-0">
           Elevate
           <br />
           <span className="font-medium">Everyday Living</span>
         </h2>
-        <p className="text-base font-light text-salmonpink-300 md:text-lg mb-10 max-w-2xl mx-auto leading-relaxed opacity-90">
+        <p className="text-xs sm:text-sm md:text-base lg:text-lg font-light text-salmonpink-300 mb-6 sm:mb-8 md:mb-10 max-w-sm sm:max-w-xl md:max-w-2xl mx-auto leading-relaxed opacity-90 px-6 sm:px-4 md:px-0">
           Discover thoughtfully designed interiors and handcrafted pieces that
           bring warmth, functionality and beauty into your space.
         </p>

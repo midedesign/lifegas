@@ -54,23 +54,24 @@ const NewsletterSection = ({
   };
 
   return (
-    <section className="bg-gray-50 py-16 md:py-20">
-      <div className="max-w-4xl mx-auto text-center px-6">
+    <section className="bg-gray-50 py-10 sm:py-12 md:py-16 lg:py-20">
+      {" "}
+      <div className="max-w-sm sm:max-w-md md:max-w-2xl lg:max-w-4xl mx-auto text-center px-4 sm:px-6">
         {/* Main Heading */}
-        <h3 className="text-4xl md:text-4xl lg:text-4xl font-light text-gray-800 mb-8 leading-tight">
+        <h3 className="text-lg sm:text-xl md:text-3xl lg:text-4xl font-normal md:font-light text-salmonpink-1000 mb-6 sm:mb-8 leading-relaxed md:leading-tight">
           {title}
         </h3>
 
         {/* Subscription Input */}
-        <div className="mt-8 max-w-md mx-auto">
-          <div className="mb-6">
+        <div className="mt-6 sm:mt-8 max-w-xs sm:max-w-sm md:max-w-md mx-auto">
+          <div className="mb-3 sm:mb-4 md:mb-6">
             <input
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               onKeyPress={handleKeyPress}
               placeholder={placeholder}
-              className="w-full px-4 py-3  bg-salmonpink-100 text-left text-lightolive-300 placeholder-lightolive-300 focus:outline-none  focus:bg-salmonpink-100 transition-colors duration-200"
+              className="w-full px-3 sm:px-4 py-3 bg-salmonpink-100 text-left text-lightolive-300 placeholder-lightolive-300 text-xs sm:text-sm md:text-base focus:outline-none focus:bg-salmonpink-100 transition-colors duration-200"
               disabled={isSubmitting}
             />
           </div>
@@ -78,7 +79,7 @@ const NewsletterSection = ({
           <button
             onClick={handleSubmit}
             disabled={isSubmitting}
-            className="w-full md:w-auto bg-salmonpink-1100 text-white px-8 py-3 text-sm font-semibold tracking-wider hover:bg-gray-800 disabled:bg-gray-600 disabled:cursor-not-allowed transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+            className="bg-salmonpink-1100 text-white px-6 sm:px-8 py-3 text-xs sm:text-sm md:text-sm font-semibold uppercase tracking-wider hover:bg-salmonpink-1000 disabled:bg-salmonpink-1000 disabled:cursor-not-allowed transition-colors duration-300 shadow-md hover:shadow-lg md:w-auto w-auto"
           >
             {isSubmitting ? "Subscribing..." : buttonText}
           </button>
@@ -87,7 +88,7 @@ const NewsletterSection = ({
         {/* Success/Error Message */}
         {message && (
           <div
-            className={`mt-4 text-sm ${
+            className={`mt-3 sm:mt-4 text-xs sm:text-sm ${
               message.includes("Thank you") ? "text-green-600" : "text-red-600"
             }`}
           >
