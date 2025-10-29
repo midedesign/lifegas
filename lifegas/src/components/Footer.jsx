@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Logo from "../assets/lifegasmlogo.png";
 
 const Footer = () => {
@@ -7,38 +8,46 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto">
         {/* Logo */}
         <div className="mb-8 md:mb-12">
-          <img src={Logo} alt="Lifegasm Logo" className="h-6 sm:h-8" />
+          <Link to="/">
+            <img src={Logo} alt="Lifegasm Logo" className="h-6 sm:h-8" />
+          </Link>
         </div>
 
         {/* Links */}
         <div className="flex flex-col md:flex-row justify-between gap-6 md:gap-0 pb-6 md:pb-8 border-b border-salmonpink-1000">
           {/* Left Links */}
           <div className="flex flex-col sm:flex-row flex-wrap gap-4 sm:gap-6 md:gap-8 text-xs text-salmonpink-100">
-            <a href="#" className="hover:text-white transition-colors">
+            <Link
+              to="/portfolio"
+              className="hover:text-white transition-colors"
+            >
               Portfolio
-            </a>
-            <a href="#" className="hover:text-white transition-colors">
+            </Link>
+            <Link to="/journal" className="hover:text-white transition-colors">
               Journal
-            </a>
-            <a href="#" className="hover:text-white transition-colors">
+            </Link>
+            <Link to="/about" className="hover:text-white transition-colors">
               About
-            </a>
-            <a href="#" className="hover:text-white transition-colors">
+            </Link>
+            <Link to="/contact" className="hover:text-white transition-colors">
               Contact
-            </a>
+            </Link>
           </div>
 
           {/* Right Links */}
           <div className="flex flex-col sm:flex-row flex-wrap gap-4 sm:gap-6 md:gap-8 text-xs text-salmonpink-100">
-            <a href="#" className="hover:text-white transition-colors">
+            <Link to="/shop" className="hover:text-white transition-colors">
               Shop
-            </a>
-            <a href="#" className="hover:text-white transition-colors">
+            </Link>
+            <Link to="/cart" className="hover:text-white transition-colors">
               Cart
-            </a>
-            <a href="#" className="hover:text-white transition-colors">
+            </Link>
+            <Link
+              to="/consultation"
+              className="hover:text-white transition-colors"
+            >
               Book a Consultation
-            </a>
+            </Link>
           </div>
         </div>
 
